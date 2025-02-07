@@ -3,28 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Movies</title>
+  <title>My Premium Movies</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navigation bar -->
-  <header>
-    <div class="navbar">
-      <div class="logo">My Movies</div>
-      <div class="menu">
-        <a href="#">Home</a>
-        <a href="#">Movies</a>
-        <a href="#">TV Shows</a>
-        <a href="#">Trending</a>
-      </div>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">My Premium Movies</div>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">Movies</a>
+      <a href="#">TV Shows</a>
+      <a href="#">Trending</a>
+      <a href="#upload-section">Upload</a>
     </div>
   </header>
 
-  <!-- Featured Movie -->
+  <!-- Featured Movie Section -->
   <section class="featured">
     <div class="featured-content">
       <h1>Featured Movie</h1>
-      <p>Watch the latest hit movie!</p>
+      <p>Catch the latest blockbuster release!</p>
+      <button class="cta-button">Watch Now</button>
     </div>
   </section>
 
@@ -32,6 +32,7 @@
   <section class="movie-category">
     <h2>Popular Movies</h2>
     <div class="movies">
+      <!-- Movie Items (Example) -->
       <div class="movie-item">
         <img src="movie1.jpg" alt="Movie 1">
         <h3>Movie 1</h3>
@@ -44,7 +45,20 @@
         <img src="movie3.jpg" alt="Movie 3">
         <h3>Movie 3</h3>
       </div>
+      <!-- More movies here -->
     </div>
+  </section>
+
+  <!-- Video Upload Section -->
+  <section id="upload-section" class="upload-section">
+    <h2>Upload Your Movie</h2>
+    <form class="upload-form" action="upload" method="POST" enctype="multipart/form-data">
+      <label for="video">Select Video:</label>
+      <input type="file" name="video" id="video" accept="video/*" required>
+      <label for="title">Movie Title:</label>
+      <input type="text" name="title" id="title" required>
+      <button type="submit" class="upload-btn">Upload Video</button>
+    </form>
   </section>
 
   <script src="scripts.js"></script>
